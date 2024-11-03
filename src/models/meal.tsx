@@ -1,29 +1,19 @@
-export class Category {
-  id: string;
-  title: string;
-  color: string;
-
-  constructor(id: string, title: string, color: string) {
-    this.id = id;
-    this.title = title;
-    this.color = color;
-  }
-}
+import { Category } from "./category";
 
 class Meal {
   id: string;
-    categoryIds: Array<string>;
-    title: string;
-    affordability: string;
-    complexity: string;
-    imageUrl: string;
-    duration: number;
-    ingredients: Array<string>;
-    steps: Array<string>;
-    isGlutenFree: boolean;
-    isVegan: boolean;
-    isVegetarian: boolean;
-    isLactoseFree: boolean;
+  categoryIds: Array<string>;
+  title: string;
+  affordability: string;
+  complexity: string;
+  imageUrl: string;
+  duration: number;
+  ingredients: Array<string>;
+  steps: Array<string>;
+  isGlutenFree: boolean;
+  isVegan: boolean;
+  isVegetarian: boolean;
+  isLactoseFree: boolean;
   constructor(
     id: string,
     categoryIds: Array<string>,

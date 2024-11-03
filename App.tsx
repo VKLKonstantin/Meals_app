@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet } from 'react-native';
-import { GridTemplate } from './src/screens/GridTemplate';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { MeelsOverview } from './src/screens/MeelsOverview';
+import { MeelsOverviewScreen } from './src/screens/MeelsOverviewScreen';
+import { CategoriesScreen } from './src/screens/CategoriesScreen';
 
 const Stack = createNativeStackNavigator()
 
@@ -12,16 +12,22 @@ export default function App() {
     <>
       <StatusBar style='light' />
       <NavigationContainer>
+
+
         <Stack.Navigator
           screenOptions={{
             headerStyle: { backgroundColor: '#351401' },
             headerTintColor: 'white',
             contentStyle: { backgroundColor: '#351401' },
           }}>
-          <Stack.Screen name="MeelsCategory" component={GridTemplate} options={{
-            title: 'All Categories'
-          }} />
-          <Stack.Screen name="MeelsOverview" component={MeelsOverview} />
+          <Stack.Screen
+            name="MealsCategories"
+            component={CategoriesScreen}
+            options={{
+              title: 'All Categories',
+            }}
+          />
+          <Stack.Screen name="MeelsOverviewScreen" component={MeelsOverviewScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
@@ -29,6 +35,5 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-  },
+  container: {},
 });

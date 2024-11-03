@@ -1,13 +1,7 @@
-import { FC } from 'react';
 import { Pressable, View, Text, StyleSheet, Platform } from 'react-native';
 
-export type GridButtonProps = {
-  title: string;
-  color: string;
-  onPress: () => void;
-}
-
-export const GridButton: FC<GridButtonProps> = ({ title, color, onPress }) => {
+//@ts-ignore
+export const CategoryGridTile = ({ title, color, onPress }) => {
   return (
     <View style={styles.gridItem}>
       <Pressable
@@ -25,6 +19,8 @@ export const GridButton: FC<GridButtonProps> = ({ title, color, onPress }) => {
     </View>
   );
 }
+
+export default CategoryGridTile;
 
 const styles = StyleSheet.create({
   gridItem: {
